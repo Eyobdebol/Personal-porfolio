@@ -217,19 +217,28 @@
     transform: scale(1.05);
 }
 
-
+#contact-me {
+    height: auto;
+}
 #contact-me .container {
 	width: 100%;
 	height: auto;
 
-	padding: 150px;
+	padding: 100px;
 }
 #contact-me .row {
 	display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    flex: 1;
+
+
 }
 
 #contact-me .row .column1 {
-	flex-basis: 50%;
+    flex: 1;
+    height: auto;
+
 }
 .phone, .email, .social-media {
 	display: flex;
@@ -291,7 +300,9 @@
 }	
 
 #contact-me .column2 {
-	width: 50%;
+	flex: 1;
+    height: auto;
+
 }
 .column2 h2 {
 	font-size: 40px;
@@ -311,3 +322,31 @@ input, textarea {
     color: black;
 }
 
+
+@media (max-width : 1000px) {
+    #projects .project {
+        overflow:visible;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    #projects .project img {
+        object-fit: cover ;
+        width: 450px; 
+        height: 200px; 
+    }
+    #projects .project .layer {
+        width: 450px; 
+        height: 200px; 
+    }
+    #projects .project:hover .layer{
+        opacity: 1;
+        transition: 0.3s;
+        transform: scale(0.9);
+    }
+}
+@media (min-width: 1400px) {
+    body {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
