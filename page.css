@@ -121,7 +121,6 @@
     border-radius: 15px;
     background-color: white;
     cursor: white;
-    transition: 0.3s;
 
     cursor: pointer;
 }
@@ -143,10 +142,172 @@
     background-repeat: no-repeat;
     background-position: right;
 }
-
 #services .service:hover {
     transform: scale(1.05);
+    transition: 0.3s;
 }
-#services .service:hover p{
-   font-weight: 500;
+
+
+#projects {
+    height: auto;
 }
+#projects .container {
+    padding: 100px;
+}
+#projects .grid {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 20px;
+    justify-content: center;
+}
+#projects .project {
+    position: relative;
+    overflow: hidden;
+    width: 500px; 
+    height: 300px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;   
+}
+#projects .grid img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain;  
+    display: block;  
+}
+#projects .layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.757);
+    align-items: center;
+
+    opacity: 0;
+
+
+}
+#projects .layer h2, 
+#projects .layer p, 
+#projects .layer a {
+    text-align: center;
+    margin: 5px;
+    background-color: white;
+    color: black;
+    padding: 0 40px;
+    width: 100%;
+}
+#projects .layer a{
+    padding: 2px 20px;
+    border-radius: 20px;
+    background-color: rgb(32, 87, 251);
+}
+#projects .project:hover .layer{
+    opacity: 1;
+    height: 100%;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+
+#contact-me .container {
+	width: 100%;
+	height: auto;
+
+	padding: 150px;
+}
+#contact-me .row {
+	display: flex;
+}
+
+#contact-me .row .column1 {
+	flex-basis: 50%;
+}
+.phone, .email, .social-media {
+	display: flex;
+	color: white;
+	font-size: 20px;
+	font-weight: 200;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.icon {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border-radius: 50%;
+	margin-right: 10px;
+	border: 2px solid white;
+	transition: 0.3s;
+	cursor: pointer;
+}
+.icon.email:hover {
+	background-color: red;
+	border: 2px solid red;
+	transform: translateY(-10px);
+}
+.icon.phone:hover {
+	background-color: green;
+	border: 2px solid green;
+	transform: translateY(-10px);
+}
+
+.social-media {
+	margin-top: 20px;
+	display: flex;
+}
+.social-media .icon {
+	position: relative;
+	margin-right: 20px;
+}
+.icon.facebook:hover {
+	background-color: blue;
+	border: 2px solid blue;
+	transform: translateY(-10px);
+}
+.icon.linkedin:hover {
+	background-color: rgb(33, 155, 255);
+	border: 2px solid rgb(33, 155, 255);
+	transform: translateY(-10px);
+}
+.icon.twitter:hover {
+	background-color: white;
+	border: 2px solid white;
+	transform: translateY(-10px);
+}
+.icon.telegram:hover {
+	background-color: rgb(33, 155, 255);
+	border: 2px solid rgb(33, 155, 255);
+	transform: translateY(-10px);
+}	
+
+#contact-me .column2 {
+	width: 50%;
+}
+.column2 h2 {
+	font-size: 40px;
+	font-weight: 800;
+	margin-top: 10px;
+}
+label {
+	display: block;
+	margin-bottom: 20px;
+}
+input, textarea {
+	width: 100%;
+	border: none;
+	border-radius: 4px;
+	padding: 3px;
+    background-color: white;
+    color: black;
+}
+
