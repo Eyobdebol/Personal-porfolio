@@ -327,6 +327,7 @@ input, textarea {
     #projects .project {
         overflow:visible;
         height: auto;
+        width: auto;
         margin-bottom: 10px;
     }
     #projects .project img {
